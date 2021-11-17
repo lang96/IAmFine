@@ -117,7 +117,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.doraemon.iamfine.iamfine/com.doraemon.iamfine.iamfine.HelloApplication
+                            <mainClass>com.doraemon.iamfine.iamfine/com.doraemon.iamfine.MainApplication
                             </mainClass>
                         </configuration>
                     </execution>

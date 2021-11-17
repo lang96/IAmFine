@@ -1,4 +1,4 @@
-package com.doraemon.iamfine.iamfine;
+package com.doraemon.iamfine;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

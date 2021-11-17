@@ -1,4 +1,4 @@
-package com.doraemon.iamfine.iamfine;
+package com.doraemon.iamfine;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,15 +10,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class BindingPageController {
+public class PreferencesPageController {
 
     @FXML
     private Button backBtn;
 
-    @FXML
-    public void toUserProfile() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("userProfile.fxml"));
+    @FXML
+    public void toUserHomepage() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));

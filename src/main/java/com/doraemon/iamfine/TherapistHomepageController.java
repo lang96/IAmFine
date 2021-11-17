@@ -1,4 +1,4 @@
-package com.doraemon.iamfine.iamfine;
+package com.doraemon.iamfine;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +10,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LoginController {
+public class TherapistHomepageController {
 
     @FXML
-    private Button backBtn,theraBtn;
+    private Button backBtn,preferenceBtn;
 
     @FXML
     public void toLandingPage() throws IOException {
@@ -25,13 +25,15 @@ public class LoginController {
 
     }
 
-    @FXML
-    public void toTherapistHomePage() throws IOException {
+//    @FXML
+//    public void toPreferences() throws IOException {
+//
+//        Parent root = FXMLLoader.load(getClass().getResource("preferencesPage.fxml"));
+//        Stage window = (Stage) preferenceBtn.getScene().getWindow();
+//        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+//        window.setScene(new Scene(root,335,602));
+//
+//    }
 
-        Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
-        Stage window = (Stage) theraBtn.getScene().getWindow();
-        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
-        window.setScene(new Scene(root,335,602));
 
-    }
 }

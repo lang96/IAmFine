@@ -1,4 +1,4 @@
-package com.doraemon.iamfine.iamfine;
+package com.doraemon.iamfine;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

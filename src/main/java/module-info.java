@@ -10,6 +10,6 @@ module com.doraemon.iamfine.iamfine {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.doraemon.iamfine.iamfine to javafx.fxml;
-    exports com.doraemon.iamfine.iamfine;
+    opens com.doraemon.iamfine to javafx.fxml;
+    exports com.doraemon.iamfine;
 }
