@@ -13,7 +13,7 @@
     <children>
         <ImageView fitHeight="602.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../raw/bg_2.png" />
+                <Image url="@../../../raw/bg_2.png" />
             </image>
         </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="91.0" layoutY="53.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" width="339.0" />
@@ -40,7 +40,7 @@
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../raw/spanner.png" />
+                  <Image url="@../../../raw/spanner.png" />
                </image>
             </ImageView>
          </graphic>

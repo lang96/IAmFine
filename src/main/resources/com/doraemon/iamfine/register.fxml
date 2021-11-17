@@ -15,7 +15,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="606.0" layoutY="-2.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" width="339.0" />
         <ImageView fitHeight="602.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../raw/bg_2.png" />
+                <Image url="@../../../raw/bg_2.png" />
             </image>
         </ImageView>
       <Text layoutX="55.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
@@ -38,7 +38,7 @@
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../raw/left.png" />
+                  <Image url="@../../../raw/left.png" />
                </image>
             </ImageView>
          </graphic></Button>

@@ -12,12 +12,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="602.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doraemon.iamfine.iamfine.UserProfileController">
+<AnchorPane prefHeight="602.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doraemon.iamfine.UserProfileController">
 
     <children>
     <ImageView fitHeight="602.0" fitWidth="342.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
         <image>
-            <Image url="@../../../../raw/bg_2.png" />
+            <Image url="@../../../raw/bg_2.png" />
         </image>
     </ImageView>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#276927" height="56.0" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="339.0" />
@@ -30,7 +30,7 @@
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../raw/left.png" />
+                  <Image url="@../../../raw/left.png" />
                </image>
             </ImageView>
          </graphic>
@@ -42,7 +42,7 @@
       </Text>
       <ImageView fitHeight="99.0" fitWidth="135.0" layoutX="118.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../raw/mekom.jpg" />
+            <Image url="@../../../raw/mekom.jpg" />
          </image>
       </ImageView>
       <Text fill="#2b751e" layoutX="27.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
