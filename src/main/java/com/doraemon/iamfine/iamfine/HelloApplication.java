@@ -13,6 +13,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+
         Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
