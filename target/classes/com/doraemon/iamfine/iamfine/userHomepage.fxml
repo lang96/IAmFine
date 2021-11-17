@@ -33,10 +33,19 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <Button layoutX="122.0" layoutY="236.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Profile" textFill="WHITE" />
-      <Button layoutX="122.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Condition" textFill="WHITE" />
+      <Button fx:id="profileBtn" layoutX="122.0" layoutY="236.0" mnemonicParsing="false" onAction="#toUserProfile" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Profile" textFill="WHITE" />
+      <Button fx:id="conditionBtn" layoutX="122.0" layoutY="349.0" mnemonicParsing="false" onAction="#toCondition" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Condition" textFill="WHITE" />
       <Button layoutX="122.0" layoutY="471.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Meeting" textFill="WHITE" />
       <Button fx:id="backBtn" layoutX="141.0" layoutY="540.0" mnemonicParsing="false" onAction="#toLandingPage" prefHeight="25.0" prefWidth="172.0" text="BACK HOMEPAGE FOR TEST" />
+      <Button fx:id="preferenceBtn" layoutX="272.0" layoutY="10.0" mnemonicParsing="false" onAction="#toPreferences" prefHeight="31.0" prefWidth="49.0" style="-fx-background-color: D1408516;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../raw/spanner.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
     </children>
 
 </AnchorPane>
