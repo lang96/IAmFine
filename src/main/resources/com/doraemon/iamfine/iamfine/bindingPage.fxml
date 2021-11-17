@@ -76,7 +76,7 @@
       <Button layoutX="251.0" layoutY="343.0" mnemonicParsing="false" text="Delete" />
       <Button layoutX="251.0" layoutY="386.0" mnemonicParsing="false" text="Delete" />
       <Button layoutX="251.0" layoutY="425.0" mnemonicParsing="false" text="Delete" />
-      <Button layoutX="53.0" layoutY="521.0" mnemonicParsing="false" style="-fx-background-color: D1408516;">
+      <Button layoutX="53.0" layoutY="521.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -85,7 +85,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="133.0" layoutY="522.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="51.0" style="-fx-background-color: D1408516;">
+      <Button layoutX="133.0" layoutY="522.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="51.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -94,7 +94,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="212.0" layoutY="522.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="48.0" style="-fx-background-color: D1408516;">
+      <Button layoutX="212.0" layoutY="522.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="48.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                <image>

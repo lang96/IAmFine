@@ -96,7 +96,7 @@
       </Button>
       <Button layoutX="212.0" layoutY="522.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="48.0" style="-fx-background-color: D1408516;">
          <graphic>
-            <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: transparent;">
                <image>
                   <Image url="@../../../../raw/instaicon.png" />
                </image>
