@@ -26,7 +26,7 @@
             <Font size="23.0" />
          </font>
       </Text>
-      <Button fx:id="backBtn" layoutX="6.0" layoutY="16.0" mnemonicParsing="false" onAction="#toUserHomepage" style="-fx-background-color: D1408516;">
+      <Button fx:id="backBtn" layoutX="6.0" layoutY="16.0" mnemonicParsing="false" onAction="#toUserHomepage" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>

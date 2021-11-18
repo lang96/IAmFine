@@ -13,13 +13,23 @@ import java.io.IOException;
 public class TherapistHomepageController {
 
     @FXML
-    private Button backBtn,preferenceBtn;
+    private Button backBtn,profileBtn;
 
     @FXML
     public void toLandingPage() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
+
+    @FXML
+    public void toTherapistProfile() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("therapistProfile.fxml"));
+        Stage window = (Stage) profileBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
 

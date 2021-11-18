@@ -22,7 +22,14 @@
             <Font size="23.0" />
          </font>
       </Text>
-      <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0" style="-fx-background-color: D1408516;" />
+      <Button fx:id="backBtn" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#toUserMeetingSchedule" prefHeight="31.0" prefWidth="44.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../raw/left.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Text layoutX="59.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick A Date" wrappingWidth="72.31053924560547">
          <font>
             <Font size="14.0" />
@@ -30,11 +37,6 @@
       </Text>
       <DatePicker editable="false" layoutX="59.0" layoutY="98.0" prefHeight="26.0" prefWidth="216.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#276927" height="47.0" layoutY="345.0" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="342.0" />
-      <ImageView fitHeight="19.0" fitWidth="38.0" layoutX="22.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../raw/left.png" />
-         </image>
-      </ImageView>
       <Text fill="WHITE" layoutX="102.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Therapist" wrappingWidth="136.87890625">
          <font>
             <Font size="16.0" />
@@ -56,7 +58,7 @@
          </font>
       </Text>
       <Button layoutX="107.0" layoutY="568.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #276927;" text="Request Meeting" textFill="#fafafa" />
-      <Button layoutX="288.0" layoutY="477.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: #bce0bd;">
+      <Button layoutX="288.0" layoutY="477.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="28.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
