@@ -1,10 +1,12 @@
 package com.doraemon.iamfine;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -12,9 +14,18 @@ import java.io.IOException;
 
 public class RegisterController {
 
-
     @FXML
     private Button backBtn,userBtn,theraBtn;
+
+    @FXML
+    private TextField usernameTextField,passwordTextField,
+            phoneNumTextField,emailTextField, ageTextField;
+
+    @FXML
+    private RadioButton male, female;
+
+    @FXML
+    private ToggleGroup radioGroup;
 
     @FXML
     public void toLandingPage() throws IOException {
@@ -29,11 +40,31 @@ public class RegisterController {
     @FXML
     public void toUserHomePage() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
-        Stage window = (Stage) userBtn.getScene().getWindow();
-        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
-        window.setScene(new Scene(root,335,602));
+        String username = usernameTextField.getText();
+        String password = passwordTextField.getText();
+        String phoneNum = phoneNumTextField.getText();
+        String email = phoneNumTextField.getText();
+        String age = ageTextField.getText();
+        String gender = "";
 
+        if (username.equals("") || password.equals("") || phoneNum.equals("") ||
+                email.equals("") || age.equals("")) {
+            Alert dialog = new Alert(Alert.AlertType.ERROR, "Please Fill in the form", ButtonType.OK);
+            dialog.show();
+        } else {
+            if (male.isSelected())
+                gender = "Male";
+            else
+                gender = "Female";
+
+            Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
+            Stage window = (Stage) userBtn.getScene().getWindow();
+            window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+            window.setScene(new Scene(root,335,602));
+
+            //todo: pass up to firebase
+
+        }
     }
 
 
