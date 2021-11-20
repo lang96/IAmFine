@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="602.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doraemon.iamfine.TherapistRegisterController">
+
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="606.0" layoutY="-2.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" width="339.0" />
+        <ImageView fitHeight="602.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../raw/bg_2.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="55.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+        <Text layoutX="55.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+        <Text layoutX="55.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+        <Text layoutX="51.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+        <TextField layoutX="53.0" layoutY="132.0" />
+        <TextField layoutX="53.0" layoutY="194.0" />
+        <TextField layoutX="53.0" layoutY="311.0" />
+        <TextField layoutX="53.0" layoutY="254.0" />
+        <Text layoutX="55.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience" />
+        <TextField layoutX="55.0" layoutY="440.0" prefHeight="25.0" prefWidth="64.0" />
+        <Text layoutX="146.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+        <RadioButton layoutX="202.0" layoutY="432.0" mnemonicParsing="false" text="Male" />
+        <RadioButton layoutX="202.0" layoutY="457.0" mnemonicParsing="false" text="Female" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#276927" height="56.0" layoutX="-2.0" layoutY="-2.0" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="343.0" />
+        <Button fx:id="backBtn" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#toLandingPage" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../raw/left.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button fx:id="theraBtn" layoutX="261.0" layoutY="14.0" mnemonicParsing="false" onAction="#toTheraHomepage" style="-fx-background-color: #276927;" text="REGISTER" textFill="WHITE" />
+      <Text layoutX="146.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist" />
+      <Text layoutX="51.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License" />
+      <TextField layoutX="53.0" layoutY="384.0" />
+    </children>
+
+</AnchorPane>
