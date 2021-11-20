@@ -10,16 +10,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class UserMeetingController {
+public class TherapistScheduleMeetingController {
 
     @FXML
     private Button backBtn;
 
-
     @FXML
-    public void toUserSetMeeting() throws IOException {
+    public void toTheraMeeting() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("userMeetingSchedule.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("therapistMeeting.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));

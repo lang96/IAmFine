@@ -54,7 +54,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Button layoutX="252.0" layoutY="538.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #276927;" text="Meet" textFill="#fafafa" />
+      <Button fx:id="meetBtn" layoutX="252.0" layoutY="538.0" mnemonicParsing="false" onAction="#toJoinMeeting" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #276927;" text="Meet" textFill="#fafafa" />
       <Text layoutX="172.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:30 am" wrappingWidth="49.763671875">
          <font>
             <Font size="13.0" />
