@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="602.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doraemon.iamfine.TherapistProfileController">
+
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="547.0" layoutX="-7.0" layoutY="55.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="349.0" />
+        <ImageView fitHeight="602.0" fitWidth="342.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../raw/bg_2.png" />
+            </image>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#276927" height="56.0" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="342.0" />
+        <Text fill="WHITE" layoutX="57.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile" wrappingWidth="71.767578125">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+        <Button fx:id="backBtn" layoutX="6.0" layoutY="16.0" mnemonicParsing="false" onAction="#toTherapistHomepage" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../raw/left.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Text layoutX="88.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get Username">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="99.0" fitWidth="135.0" layoutX="118.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../raw/accicon.png" />
+            </image>
+        </ImageView>
+        <Text fill="#2b751e" layoutX="14.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#2b751e" layoutX="14.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#2b751e" layoutX="13.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#2b751e" layoutX="19.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField disable="true" layoutX="146.0" layoutY="224.0" />
+        <TextField layoutX="146.0" layoutY="264.0" />
+        <TextField layoutX="147.0" layoutY="300.0" />
+        <TextField layoutX="147.0" layoutY="339.0" />
+        <TextField layoutX="146.0" layoutY="415.0" />
+        <Button layoutX="140.0" layoutY="499.0" mnemonicParsing="false" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
+        <ComboBox fx:id="gender" layoutX="147.0" layoutY="373.0" prefWidth="150.0" />
+      <Text fill="#2b751e" layoutX="19.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="146.0" layoutY="451.0" prefHeight="25.0" prefWidth="58.0" />
+        <Text fill="#2b751e" layoutX="15.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist ID">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#2b751e" layoutX="14.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+    </children>
+
+</AnchorPane>
