@@ -12,14 +12,14 @@ import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import java.io.IOException;
 
-import static com.doraemon.iamfine.FirebaseOperation.initFirebase;
+
 
 public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("bindingPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));
@@ -28,8 +28,6 @@ public class MainApplication extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-
-        initFirebase();
         launch();
     }
 }
