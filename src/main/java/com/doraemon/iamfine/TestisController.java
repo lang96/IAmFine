@@ -54,14 +54,16 @@ public class TestisController {
     }
 
     @FXML
-    public void toTestDatabase() throws IOException {
+    public void toTestDatabase() {
+
+        System.out.println(System.getProperty("user.dir"));
 
         String val = usernameTextField.getText();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference testRef = database.getReference("deepInsideThePussy");
 
-        testRef.setValue("wadu hek test", new DatabaseReference.CompletionListener() {
+        testRef.push().setValue("wadu hek test", new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                 Alert dialog = new Alert(Alert.AlertType.CONFIRMATION, "Creampied!", ButtonType.OK);

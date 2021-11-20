@@ -17,7 +17,7 @@ public class FirebaseOperation {
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://i-am-fine-c73b6-default-rtdb.asia-southeast1.firebasedatabase.app/")
+                .setDatabaseUrl("https://i-am-fine-c73b6-default-rtdb.asia-southeast1.firebasedatabase.app")
                 .build();
 
         // .setCredentials(GoogleCredentials.fromStream(serviceAccount))
