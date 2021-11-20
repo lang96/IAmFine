@@ -7,52 +7,86 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class UserProfileController  implements Initializable {
+public class UserProfileController {
 
-    ObservableList<String> genderList = FXCollections.observableArrayList("Male", "Female");
-
-    @FXML
-    private ComboBox gender;
 
     @FXML
-    private Button backBtn;
+    private ComboBox<String> gender;
+
+    @FXML
+    private Button backBtn, confirmBtn;
 
     @FXML
     private Hyperlink bindBtn;
 
     @FXML
-    public void toUserHomepage() throws IOException {
+    private TextField IDTextField, passwordTextField,
+    phoneNumTextField, emailTextField, ageTextField;
 
+    @FXML
+    private TextArea addressTextField;
+
+    @FXML
+    public void initialize() {
+        gender.getItems().removeAll(gender.getItems());
+        gender.getItems().addAll("Male", "Female");
+
+        IDTextField.setText("US001");
+    }
+
+    @FXML
+    public void toUserHomepage() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
-
     }
 
     @FXML
     public void toBindingPage() throws IOException {
-
         Parent root = FXMLLoader.load(getClass().getResource("bindingPage.fxml"));
         Stage window = (Stage) bindBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
-
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    @FXML
+    public void confirmAction() throws IOException {
+        if (passwordTextField.getText().equals("") || passwordTextField.getText().equals("") ||
+                addressTextField.getText().equals("") || phoneNumTextField.getText().equals("") ||
+                emailTextField.getText().equals("") || ageTextField.getText().equals("")) {
+            Alert alert = new Alert(Alert.AlertType.ERROR,
+                    "Please fill in the form", ButtonType.OK);
+            alert.show();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setContentText("Are you sure to continue?");
+            ButtonType yes = new ButtonType("Yes");
+            ButtonType no = new ButtonType("No");
 
-        gender.setItems(genderList);
+            alert.getButtonTypes().clear();
+            alert.getButtonTypes().addAll(yes, no);
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get() == yes) {
+                Alert dialogue = new Alert(Alert.AlertType.NONE,
+                        "Change successful", ButtonType.OK);
+                dialogue.showAndWait();
+                Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
+                Stage window = (Stage) confirmBtn.getScene().getWindow();
+                window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+                window.setScene(new Scene(root,335,602));
+            }
+        }
     }
 }

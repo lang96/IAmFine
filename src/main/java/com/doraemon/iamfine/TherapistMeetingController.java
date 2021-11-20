@@ -1,5 +1,7 @@
 package com.doraemon.iamfine;
 
+import java.net.URI;
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TherapistMeetingController {
+public class TherapistMeetingController extends Application {
 
     @FXML
     private Button backBtn,setBtn,meetBtn;
@@ -38,10 +40,18 @@ public class TherapistMeetingController {
     @FXML
     public void toTheraJoinMeeting() throws IOException {
 
+        //todo: remove this if not needed
         Parent root = FXMLLoader.load(getClass().getResource("therapistJoinMeeting.fxml"));
         Stage window = (Stage) meetBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
+
+        getHostServices().showDocument("https://meet.google.com/");
+
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
 
     }
 }

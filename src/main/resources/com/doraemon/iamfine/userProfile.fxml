@@ -76,13 +76,13 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField disable="true" layoutX="146.0" layoutY="224.0" />
-      <TextField layoutX="146.0" layoutY="264.0" />
-      <TextArea layoutX="146.0" layoutY="293.0" prefHeight="49.0" prefWidth="149.0" />
-      <TextField layoutX="146.0" layoutY="346.0" />
-      <TextField layoutX="146.0" layoutY="379.0" />
-      <TextField layoutX="146.0" layoutY="415.0" />
-      <Button layoutX="140.0" layoutY="499.0" mnemonicParsing="false" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
+      <TextField fx:id="IDTextField" disable="true" layoutX="146.0" layoutY="224.0" />
+      <TextField fx:id="passwordTextField" layoutX="146.0" layoutY="264.0" />
+      <TextArea fx:id="addressTextField" layoutX="146.0" layoutY="293.0" prefHeight="49.0" prefWidth="149.0" />
+      <TextField fx:id="phoneNumTextField" layoutX="146.0" layoutY="346.0" />
+      <TextField fx:id="emailTextField" layoutX="146.0" layoutY="379.0" />
+      <TextField fx:id="ageTextField" layoutX="146.0" layoutY="415.0" />
+      <Button fx:id="confirmBtn" layoutX="140.0" layoutY="499.0" mnemonicParsing="false" onAction="#confirmAction" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
       <Hyperlink fx:id="bindBtn" layoutX="96.0" layoutY="565.0" onAction="#toBindingPage" text="Bind Contact Social Media" />
       <ComboBox fx:id="gender" layoutX="146.0" layoutY="453.0" prefWidth="150.0" />
       <Label layoutX="84.0" layoutY="176.0" text="GET USERNAME">

@@ -19,7 +19,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("testis.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("bindingPage.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));

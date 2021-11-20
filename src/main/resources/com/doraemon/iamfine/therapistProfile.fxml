@@ -60,19 +60,19 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField disable="true" layoutX="146.0" layoutY="224.0" />
-        <TextField layoutX="146.0" layoutY="264.0" />
-        <TextField layoutX="147.0" layoutY="300.0" />
-        <TextField layoutX="147.0" layoutY="339.0" />
-        <TextField layoutX="146.0" layoutY="415.0" />
-        <Button layoutX="140.0" layoutY="499.0" mnemonicParsing="false" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
+        <TextField fx:id="IDTextField" disable="true" layoutX="146.0" layoutY="224.0" />
+        <TextField fx:id="passwordTextField" layoutX="146.0" layoutY="264.0" />
+        <TextField fx:id="phoneNumTextField" layoutX="147.0" layoutY="300.0" />
+        <TextField fx:id="emailTextField" layoutX="147.0" layoutY="339.0" />
+        <TextField fx:id="licenseTextField" layoutX="146.0" layoutY="415.0" />
+        <Button layoutX="140.0" layoutY="499.0" mnemonicParsing="false" onAction="#confirmBtn" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
         <ComboBox fx:id="gender" layoutX="147.0" layoutY="373.0" prefWidth="150.0" />
       <Text fill="#2b751e" layoutX="19.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField layoutX="146.0" layoutY="451.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="experienceTextField" layoutX="146.0" layoutY="451.0" prefHeight="25.0" prefWidth="58.0" />
         <Text fill="#2b751e" layoutX="15.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist ID">
             <font>
                 <Font size="18.0" />

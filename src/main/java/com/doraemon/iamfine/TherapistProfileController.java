@@ -4,17 +4,34 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class TherapistProfileController {
 
     @FXML
     private Button backBtn;
 
+    @FXML
+    private TextField IDTextField, passwordTextField, phoneNumTextField,
+            emailTextField, licenseTextField, experienceTextField;
+
+    @FXML
+    private ComboBox<String> gender;
+
+    @FXML
+    public void initialize() {
+        gender.getItems().removeAll(gender.getItems());
+        gender.getItems().addAll("Male", "Female");
+
+        IDTextField.setText("TH001");
+    }
 
     @FXML
     public void toTherapistHomepage() throws IOException {
@@ -22,7 +39,39 @@ public class TherapistProfileController {
         Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
-        window.setScene(new Scene(root,335,602));
+        window.setScene(new Scene(root, 335, 602));
 
     }
+
+    @FXML
+    public void confirmBtn() throws IOException {
+        if (passwordTextField.getText().equals("") || phoneNumTextField.getText().equals("") ||
+                emailTextField.getText().equals("") || licenseTextField.getText().equals("") ||
+                experienceTextField.getText().equals("")) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill in the form", ButtonType.OK);
+            alert.show();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Are you sure to continue?");
+
+            ButtonType yes = new ButtonType("Yes");
+            ButtonType no = new ButtonType("No");
+
+            alert.getButtonTypes().clear();
+            alert.getButtonTypes().addAll(yes, no);
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get() == yes) {
+                Alert dialogue = new Alert(Alert.AlertType.CONFIRMATION,
+                        "Change successful", ButtonType.OK);
+                dialogue.showAndWait();
+                Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
+                Stage window = (Stage) backBtn.getScene().getWindow();
+                window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+                window.setScene(new Scene(root, 335, 602));
+            }
+        }
+    }
 }
+

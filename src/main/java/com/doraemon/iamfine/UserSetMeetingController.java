@@ -12,6 +12,8 @@ import java.io.IOException;
 
 public class UserSetMeetingController {
 
+    //todo: setMeetingBtn for what?
+
     @FXML
     private Button backBtn,setMeetingBtn;
 
