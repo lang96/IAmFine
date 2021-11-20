@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.ArrayList;
 
@@ -36,7 +37,7 @@ public class LandingPageController {
     @FXML
     public void toRegister() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("userRegister.fxml"));
         Stage window = (Stage) registerBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
@@ -49,5 +50,39 @@ public class LandingPageController {
         Stage window = (Stage) signInBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
+    }
+
+    @FXML
+    public void showConfirmation() throws IOException {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Select");
+        alert.setHeaderText("Please select your user type");
+
+        ButtonType user = new ButtonType("User");
+        ButtonType therapist = new ButtonType("Therapist");
+
+
+        alert.getButtonTypes().clear();
+
+        alert.getButtonTypes().addAll(user, therapist);
+
+        Optional<ButtonType> option = alert.showAndWait();
+
+        if (option.get() == null) {
+        } else if (option.get() == user) {
+
+            Parent root = FXMLLoader.load(getClass().getResource("userRegister.fxml"));
+            Stage window = (Stage) signInBtn.getScene().getWindow();
+            window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+            window.setScene(new Scene(root,335,602));
+
+        } else if (option.get() == therapist) {
+            Parent root = FXMLLoader.load(getClass().getResource("therapistRegister.fxml"));
+            Stage window = (Stage) signInBtn.getScene().getWindow();
+            window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+            window.setScene(new Scene(root,335,602));
+
+        }
     }
 }

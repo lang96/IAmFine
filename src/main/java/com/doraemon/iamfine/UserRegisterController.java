@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class RegisterController {
+public class UserRegisterController {
 
     @FXML
     private Button backBtn,userBtn,theraBtn;
