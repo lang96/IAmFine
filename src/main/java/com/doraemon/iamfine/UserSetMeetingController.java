@@ -13,6 +13,7 @@ import java.io.IOException;
 public class UserSetMeetingController {
 
     //todo: setMeetingBtn for what?
+    //patutnya untuk user request meeting on selected date
 
     @FXML
     private Button backBtn,setMeetingBtn;
