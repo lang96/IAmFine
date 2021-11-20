@@ -9,6 +9,7 @@ module com.doraemon.iamfine.iamfine {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires javafx.media;
 
     opens com.doraemon.iamfine to javafx.fxml;
     exports com.doraemon.iamfine;

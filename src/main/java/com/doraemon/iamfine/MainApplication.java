@@ -6,7 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
 import java.io.IOException;
 
 public class MainApplication extends Application {
@@ -19,6 +21,7 @@ public class MainApplication extends Application {
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));
         primaryStage.show();
+
     }
 
     public static void main(String[] args) {

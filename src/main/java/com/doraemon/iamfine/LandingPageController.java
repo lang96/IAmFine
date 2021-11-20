@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -21,6 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -76,12 +79,21 @@ public class LandingPageController {
             Stage window = (Stage) signInBtn.getScene().getWindow();
             window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
             window.setScene(new Scene(root,335,602));
+            String musicFile = "test.wav";
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
 
         } else if (option.get() == therapist) {
             Parent root = FXMLLoader.load(getClass().getResource("therapistRegister.fxml"));
             Stage window = (Stage) signInBtn.getScene().getWindow();
             window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
             window.setScene(new Scene(root,335,602));
+            String musicFile = "test.wav";
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+
 
         }
     }
