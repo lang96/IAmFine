@@ -13,7 +13,7 @@ import java.io.IOException;
 public class PreferencesPageController {
 
     @FXML
-    private Button backBtn;
+    private Button backBtn,logoutBtn;
 
 
     @FXML
@@ -21,6 +21,16 @@ public class PreferencesPageController {
 
         Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
         Stage window = (Stage) backBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
+
+    @FXML
+    public void logOut() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
+        Stage window = (Stage) logoutBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
 

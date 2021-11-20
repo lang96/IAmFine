@@ -62,7 +62,7 @@
       <RadioButton layoutX="238.0" layoutY="204.0" mnemonicParsing="false" prefWidth="0.0" />
       <RadioButton layoutX="238.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0" />
       <RadioButton layoutX="238.0" layoutY="314.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0" />
-      <Button layoutX="117.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #276927;" text="Log Out" textFill="WHITE" />
+      <Button fx:id="logoutBtn" layoutX="117.0" layoutY="445.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #276927;" text="Log Out" textFill="WHITE" />
     </children>
 
 
