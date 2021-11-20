@@ -10,5 +10,5 @@
 
 *Project Completion Breakdown*
 
-- Backend | 10 %
-- GUI | 10 %
+- Backend | 20 %
+- GUI | 85 %
