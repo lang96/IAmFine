@@ -13,7 +13,7 @@ import java.io.IOException;
 public class UserMeetingScheduleController {
 
     @FXML
-    private Button backBtn,setMeetingBtn;
+    private Button backBtn,setMeetingBtn,meetBtn;
 
 
     @FXML
@@ -31,6 +31,16 @@ public class UserMeetingScheduleController {
 
         Parent root = FXMLLoader.load(getClass().getResource("userSetMeeting.fxml"));
         Stage window = (Stage) setMeetingBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
+
+    @FXML
+    public void toJoinMeeting() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("userMeeting.fxml"));
+        Stage window = (Stage) meetBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
 

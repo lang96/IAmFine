@@ -13,7 +13,7 @@ import java.io.IOException;
 public class TherapistHomepageController {
 
     @FXML
-    private Button backBtn,profileBtn;
+    private Button backBtn,profileBtn,meetingBtn;
 
     @FXML
     public void toLandingPage() throws IOException {
@@ -29,6 +29,16 @@ public class TherapistHomepageController {
     public void toTherapistProfile() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("therapistProfile.fxml"));
+        Stage window = (Stage) profileBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
+
+    @FXML
+    public void toTherapistMeeting() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("therapistMeeting.fxml"));
         Stage window = (Stage) profileBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));

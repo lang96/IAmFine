@@ -1,4 +1,4 @@
-package com.doraemon.iamfine.iamfine;
+package com.doraemon.iamfine;
 
 public class TherapistFeedbackController {
 }

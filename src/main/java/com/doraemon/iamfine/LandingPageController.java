@@ -58,6 +58,11 @@ public class LandingPageController {
     @FXML
     public void showConfirmation() throws IOException {
 
+        String musicFile2 = "test.wav";
+        Media sound2 = new Media(new File(musicFile2).toURI().toString());
+        MediaPlayer mediaPlayer2 = new MediaPlayer(sound2);
+        mediaPlayer2.play();
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Select");
         alert.setHeaderText("Please select your user type");
