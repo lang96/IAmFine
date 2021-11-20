@@ -28,6 +28,7 @@ public class UserMeetingScheduleController extends Application {
     }
 
     //todo: confuse on what this does
+    //ini just pergi dekat page set meeting la. page yang ni untuk tengok appointment
     @FXML
     public void toSetMeeting() throws IOException {
 
