@@ -32,7 +32,6 @@ public class LoginController {
     @FXML
     public void toTherapistHomePage() throws IOException {
         //dummy
-        //todo: getting info from databse
         String usernameFirebase = "Adib";
         String passwordFirebase = "rocket";
 

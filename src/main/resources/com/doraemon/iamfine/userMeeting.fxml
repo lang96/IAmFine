@@ -47,12 +47,12 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField layoutX="84.0" layoutY="507.0" prefHeight="26.0" prefWidth="166.0" />
+      <TextField fx:id="commentTextField" layoutX="84.0" layoutY="507.0" prefHeight="26.0" prefWidth="166.0" />
       <Text fill="#1779b7" layoutX="89.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Comment" wrappingWidth="134.936767578125">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Button layoutX="260.0" layoutY="546.0" mnemonicParsing="false" style="-fx-background-color: #276927;" text="Submit" textFill="#f4f4f4" />
+      <Button fx:id="submitBtn" layoutX="260.0" layoutY="546.0" mnemonicParsing="false" onAction="#submitAction" style="-fx-background-color: #276927;" text="Submit" textFill="#f4f4f4" />
    </children>
 </AnchorPane>

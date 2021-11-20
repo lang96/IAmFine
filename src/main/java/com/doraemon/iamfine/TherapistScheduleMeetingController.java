@@ -24,4 +24,10 @@ public class TherapistScheduleMeetingController {
         window.setScene(new Scene(root,335,602));
 
     }
+
+    //todo: nak buatpe ni
+    @FXML
+    public void acceptBtn() {
+
+    }
 }
