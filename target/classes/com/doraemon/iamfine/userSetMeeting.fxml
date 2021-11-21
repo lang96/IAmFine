@@ -43,31 +43,18 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="118.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist's Name" wrappingWidth="105.9820556640625">
+      <Text layoutX="125.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stan Lipschitz" textAlignment="CENTER" wrappingWidth="105.9820556640625" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="111.0179443359375">
          <font>
-            <Font size="13.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="144.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="44.45263671875">
+      <Text layoutX="119.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25 years" textAlignment="CENTER" wrappingWidth="118.9254150390625" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="104.0745849609375">
          <font>
-            <Font size="13.0" />
+            <Font size="15.0" />
          </font>
       </Text>
-      <Text layoutX="112.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Years Of Experience" wrappingWidth="118.9254150390625">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <Button layoutX="107.0" layoutY="568.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #276927;" text="Request Meeting" textFill="#fafafa" />
-      <Button layoutX="288.0" layoutY="477.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="28.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../raw/rightArrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button fx:id="setMeetingBtn" layoutX="115.0" layoutY="566.0" mnemonicParsing="false" onAction="#setMeeting" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #276927;" text="Request Meeting" textFill="#fafafa" />
+      <Button layoutX="288.0" layoutY="477.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: transparent;" />
       <ComboBox fx:id="hours" layoutX="66.0" layoutY="270.0" prefHeight="25.0" prefWidth="58.0" />
       <ComboBox fx:id="minutes" layoutX="178.0" layoutY="270.0" prefHeight="25.0" prefWidth="58.0" />
       <Text layoutX="128.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours" />

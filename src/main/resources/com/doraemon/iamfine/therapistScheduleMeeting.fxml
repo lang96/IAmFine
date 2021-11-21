@@ -37,19 +37,12 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="132.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : Han So hee" />
-      <Text layoutX="147.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age : 26" wrappingWidth="43.1953125" />
-      <Text layoutX="132.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender : Female" wrappingWidth="101.607421875" />
-      <Text layoutX="143.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time : 6 - 7 pm" wrappingWidth="79.96875" />
-      <Button layoutX="133.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptBtn" style="-fx-background-color: #276927;" text="Accept Meeting" textFill="WHITE" />
-      <Button layoutX="282.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="36.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="36.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../raw/rightArrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Text layoutX="119.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : Han So Hee" />
+      <Text layoutX="147.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age : 27" wrappingWidth="43.1953125" />
+      <Text layoutX="125.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender : Female" wrappingWidth="101.607421875" />
+      <Text layoutX="136.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time : 2 pm" wrappingWidth="79.96875" />
+      <Button fx:id="acceptBtn" layoutX="126.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptBtn" style="-fx-background-color: #276927;" text="Accept Meeting" textFill="WHITE" />
+      <Button layoutX="282.0" layoutY="455.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="36.0" style="-fx-background-color: transparent;" />
+      <Text layoutX="102.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date : 15 December 2021" wrappingWidth="147.96875" />
    </children>
 </AnchorPane>

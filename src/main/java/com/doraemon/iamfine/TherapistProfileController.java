@@ -1,5 +1,6 @@
 package com.doraemon.iamfine;
 
+import com.doraemon.iamfine.userType.Therapist;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -53,7 +54,7 @@ public class TherapistProfileController {
                 emailTextField.setText(TherapistList.get(i).getEmail());
                 licenseTextField.setText(TherapistList.get(i).getLicense());
                 experienceTextField.setText(TherapistList.get(i).getExperience());
-                gender.getSelectionModel().select(UserList.get(i).getGender());
+                gender.getSelectionModel().select(TherapistList.get(i).getGender());
 
             }
         }

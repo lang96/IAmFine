@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -24,7 +25,6 @@
         <Text layoutX="55.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
         <Text layoutX="51.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
         <TextField fx:id="fullNameTextField" layoutX="53.0" layoutY="132.0" />
-        <TextField fx:id="passwordTextField" layoutX="53.0" layoutY="194.0" />
         <TextField fx:id="emailTextField" layoutX="53.0" layoutY="311.0" />
         <TextField fx:id="phoneNumTextField" layoutX="53.0" layoutY="254.0" />
         <Text layoutX="55.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience" />
@@ -48,6 +48,7 @@
       <Text layoutX="146.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist" />
       <Text layoutX="51.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License No." />
       <TextField fx:id="licenseTextField" layoutX="53.0" layoutY="384.0" />
+      <PasswordField fx:id="passwordTextField" layoutX="53.0" layoutY="194.0" />
     </children>
 
 </AnchorPane>

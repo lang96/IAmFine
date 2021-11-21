@@ -47,8 +47,6 @@ public class UserMeetingScheduleController extends Application {
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
 
-        getHostServices().showDocument("https://meet.google.com/");
-
     }
 
     @Override

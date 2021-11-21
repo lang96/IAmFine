@@ -35,8 +35,7 @@
          </font>
       </Text>
       <Button fx:id="profileBtn" layoutX="118.0" layoutY="295.0" mnemonicParsing="false" onAction="#toTherapistProfile" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Profile" textFill="WHITE" />
-      <Button fx:id="meetingBtn" layoutX="118.0" layoutY="427.0" mnemonicParsing="false" onAction="#toTherapistMeeting" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Meetings" textFill="WHITE" />
-      <Button fx:id="backBtn" layoutX="151.0" layoutY="550.0" mnemonicParsing="false" onAction="#toLandingPage" prefHeight="25.0" prefWidth="172.0" text="BACK HOMEPAGE FOR TEST" />
+      <Button fx:id="meetingBtn" layoutX="118.0" layoutY="369.0" mnemonicParsing="false" onAction="#toTherapistMeeting" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Meetings" textFill="WHITE" />
       <Button fx:id="preferenceBtn" layoutX="280.0" layoutY="8.0" mnemonicParsing="false" onAction="#toPreferences" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
@@ -51,6 +50,7 @@
             <Font size="21.0" />
          </font>
       </Label>
+      <Button fx:id="feedbackBtn" layoutX="118.0" layoutY="439.0" mnemonicParsing="false" onAction="#toFeedback" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #276927;" text="Feedback" textFill="WHITE" />
     </children>
 
 </AnchorPane>

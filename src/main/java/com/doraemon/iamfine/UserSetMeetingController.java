@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
@@ -15,9 +16,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UserSetMeetingController implements Initializable {
-
-    //todo: setMeetingBtn for what?
-    //patutnya untuk user request meeting on selected date
 
     @FXML
     private Button backBtn,setMeetingBtn;
@@ -43,4 +41,19 @@ public class UserSetMeetingController implements Initializable {
         minutes.getItems().removeAll(minutes.getItems());
         minutes.getItems().addAll("00", "15", "30", "45");
     }
+
+    @FXML
+    public void setMeeting() throws IOException {
+
+        Alert errorAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        errorAlert.setHeaderText("Meeting scheduled");
+        errorAlert.setContentText("Your requested meeting details have been set!");
+        errorAlert.showAndWait();
+        Parent root = FXMLLoader.load(getClass().getResource("userMeetingSchedule.fxml"));
+        Stage window = (Stage) setMeetingBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
+
 }

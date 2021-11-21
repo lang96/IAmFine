@@ -1,10 +1,1 @@
-{"license":["-","t","-"],
-  "password":["sss","ttt","test"],
-  "address":["sss","-","gg, gg"],
-  "gender":["Female","Female","Male"],
-  "phone":["s","t123","123"],
-  "type":["User","Therapist","User"],
-  "experience":["-","t","-"],
-  "email":["s","t","ez@win.com"],
-  "age":["s","-","18"],
-  "username":["s","TR001","babi"], "therapistName":["-","Mak Kau Hijau","-"]}
+{"license":["-","-","004785-02","-"],"password":["han123","test","stan123","test"],"address":["Insadong, Bangi, 43000 Seoul","Bangi, Youtube Center, 35000 Selangor","-","Test Address, 1, 2, Selangor"],"gender":["Female","Female","Male","Male"],"phone":["01234554646","0123456789","0132458972","0123456789"],"therapistName":["-","-","Stan Lipschitz","-"],"type":["User","User","Therapist","User"],"experience":["-","-","25","-"],"email":["hansohee@netflixkr.com","hansohee@kr.com","lipshchitz.s@gmail.com","tester@hotmail.com"],"age":["27","27","-","22"],"username":["Han So Hee","Han So Hee2","TR001","Tester"]}
