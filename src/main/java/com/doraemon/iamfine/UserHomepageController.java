@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -16,13 +17,31 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UserHomepageController {
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.userType.User.UserList;
 
-
+public class UserHomepageController implements Initializable {
 
     @FXML
     private Button backBtn,profileBtn,conditionBtn,preferenceBtn,meetingBtn;
 
+    @FXML
+    private Label usernameLabel;
+
+    @FXML
+    public void initialize(URL url, ResourceBundle rb) {
+
+        for (int i = 0; i < UserList.size(); i++) {
+
+            if (UserList.get(i).getUsername().equals(currentUserID)) {
+
+                usernameLabel.setText(UserList.get(i).getUsername());
+
+            }
+
+        }
+
+    }
 
     @FXML
     public void toLandingPage() throws IOException {

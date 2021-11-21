@@ -24,7 +24,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));

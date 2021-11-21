@@ -11,13 +11,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
+import static com.doraemon.iamfine.MainApplication.*;
+import static com.doraemon.iamfine.data.DataOperation.*;
+
 public class TherapistRegisterController {
 
     @FXML
     private Button backBtn,theraBtn;
 
     @FXML
-    private TextField usernameTextField, passwordTextField,
+    private TextField fullNameTextField, passwordTextField,
             phoneNumTextField, emailTextField, licenseTextField,
             experienceTextField;
 
@@ -42,12 +45,19 @@ public class TherapistRegisterController {
 
         RadioButton gender = (RadioButton)radioGroup.getSelectedToggle();
 
-        if (usernameTextField.getText().equals("") || passwordTextField.getText().equals("") ||
+        if (fullNameTextField.getText().equals("") || passwordTextField.getText().equals("") ||
                 phoneNumTextField.getText().equals("") || emailTextField.getText().equals("") ||
                 licenseTextField.getText().equals("") || experienceTextField.getText().equals("") || gender == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the details below completely!", ButtonType.OK);
             alert.showAndWait();
         } else {
+
+            String fullName = fullNameTextField.getText();
+            String password = passwordTextField.getText();
+            String phoneNum = phoneNumTextField.getText();
+            String email = emailTextField.getText();
+            String license = licenseTextField.getText();
+            String experience = experienceTextField.getText();
             String selectedGender = gender.getText();
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -65,9 +75,13 @@ public class TherapistRegisterController {
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
                         "Registration successful", ButtonType.OK);
 
-                //todo : Add therapist object creation
+                String username = addTherapist(fullName, password, phoneNum, email, license, experience, selectedGender);
 
                 dialogue.showAndWait();
+
+                currentUserID = username;
+                currentUserType = "Therapist";
+
                 Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
                 Stage window = (Stage) theraBtn.getScene().getWindow();
                 window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));

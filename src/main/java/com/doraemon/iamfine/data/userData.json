@@ -1,1 +1,10 @@
-{"license":["-","t"],"password":["sss","ttt"],"address":["sss","-"],"gender":["Female","Female"],"phone":["s","t123"],"type":["User","Therapist"],"experience":["-","t"],"email":["s","t"],"age":["s","-"],"username":["s","t"]}
+{"license":["-","t","-"],
+  "password":["sss","ttt","test"],
+  "address":["sss","-","gg, gg"],
+  "gender":["Female","Female","Male"],
+  "phone":["s","t123","123"],
+  "type":["User","Therapist","User"],
+  "experience":["-","t","-"],
+  "email":["s","t","ez@win.com"],
+  "age":["s","-","18"],
+  "username":["s","TH001","babi"], "therapistName":["-","Mak Kau Hijau","-"]}

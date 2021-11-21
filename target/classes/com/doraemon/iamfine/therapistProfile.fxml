@@ -36,11 +36,6 @@
                 </ImageView>
             </graphic>
         </Button>
-        <ImageView fitHeight="99.0" fitWidth="135.0" layoutX="118.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../raw/accicon.png" />
-            </image>
-        </ImageView>
         <Text fill="#2b751e" layoutX="14.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
             <font>
                 <Font size="18.0" />
@@ -84,7 +79,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-      <Label layoutX="81.0" layoutY="174.0" text="GET THERAPIST NAME">
+      <Label fx:id="fullNameLabel" layoutX="77.0" layoutY="112.0" text="GET THERAPIST NAME">
          <font>
             <Font size="19.0" />
          </font>

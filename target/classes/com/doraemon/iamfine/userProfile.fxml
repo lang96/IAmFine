@@ -37,56 +37,45 @@
             </ImageView>
          </graphic>
       </Button>
-      <ImageView fitHeight="99.0" fitWidth="135.0" layoutX="118.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../raw/mekom.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="#2b751e" layoutX="27.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
+      <Text fill="#2b751e" layoutX="24.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="25.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <Text fill="#2b751e" layoutX="24.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="25.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+      <Text fill="#2b751e" layoutX="14.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="15.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+      <Text fill="#2b751e" layoutX="20.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="21.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+      <Text fill="#2b751e" layoutX="26.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="27.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+      <Text fill="#2b751e" layoutX="25.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#2b751e" layoutX="26.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField fx:id="IDTextField" disable="true" layoutX="146.0" layoutY="224.0" />
-      <PasswordField fx:id="passwordTextField" layoutX="146.0" layoutY="263.0" />
-      <TextArea fx:id="addressTextField" layoutX="146.0" layoutY="293.0" prefHeight="49.0" prefWidth="149.0" />
-      <TextField fx:id="phoneNumTextField" layoutX="146.0" layoutY="346.0" />
-      <TextField fx:id="emailTextField" layoutX="146.0" layoutY="379.0" />
-      <TextField fx:id="ageTextField" layoutX="146.0" layoutY="415.0" />
+      <PasswordField fx:id="passwordTextField" layoutX="145.0" layoutY="238.0" />
+      <TextArea fx:id="addressTextField" layoutX="145.0" layoutY="268.0" prefHeight="49.0" prefWidth="149.0" />
+      <TextField fx:id="phoneNumTextField" layoutX="145.0" layoutY="321.0" />
+      <TextField fx:id="emailTextField" layoutX="145.0" layoutY="354.0" />
+      <TextField fx:id="ageTextField" layoutX="145.0" layoutY="390.0" />
       <Button fx:id="confirmBtn" layoutX="140.0" layoutY="499.0" mnemonicParsing="false" onAction="#confirmAction" style="-fx-background-color: #2b751e;" text="Confirm" textFill="WHITE" />
       <Hyperlink fx:id="bindBtn" layoutX="96.0" layoutY="565.0" onAction="#toBindingPage" text="Bind Contact Social Media" />
-      <ComboBox fx:id="gender" layoutX="146.0" layoutY="453.0" prefWidth="150.0" />
-      <Label layoutX="84.0" layoutY="176.0" text="GET USERNAME">
+      <ComboBox fx:id="gender" layoutX="145.0" layoutY="428.0" prefWidth="150.0" />
+      <Label fx:id="usernameLabel" contentDisplay="CENTER" layoutX="84.0" layoutY="112.0" text="GET USERNAME">
          <font>
             <Font size="24.0" />
          </font>

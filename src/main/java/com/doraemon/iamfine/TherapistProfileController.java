@@ -27,6 +27,9 @@ public class TherapistProfileController {
     private Button backBtn;
 
     @FXML
+    private Label fullNameLabel;
+
+    @FXML
     private TextField IDTextField, passwordTextField, phoneNumTextField,
             emailTextField, licenseTextField, experienceTextField;
 
@@ -35,6 +38,7 @@ public class TherapistProfileController {
 
     @FXML
     public void initialize() {
+
         gender.getItems().removeAll(gender.getItems());
         gender.getItems().addAll("Male", "Female");
 
@@ -42,6 +46,7 @@ public class TherapistProfileController {
 
             if (TherapistList.get(i).getUsername().equals(currentUserID)) {
 
+                fullNameLabel.setText(TherapistList.get(i).getFullName());
                 IDTextField.setText(TherapistList.get(i).getUsername());
                 passwordTextField.setText(TherapistList.get(i).getPassword());
                 phoneNumTextField.setText(TherapistList.get(i).getPhone());

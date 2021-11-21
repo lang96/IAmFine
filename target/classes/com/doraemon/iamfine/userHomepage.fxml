@@ -24,7 +24,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="77.0" layoutY="56.0" opacity="0.42" stroke="BLACK" strokeType="INSIDE" width="339.0" />
-      <Text fill="WHITE" layoutX="155.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi, ">
+      <Text fill="WHITE" layoutX="99.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello there," textAlignment="CENTER" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="97.416015625">
          <font>
             <Font size="28.0" />
          </font>
@@ -42,7 +42,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="81.0" layoutY="95.0" text="GET USERNAME" textFill="WHITE">
+      <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="95.0" text="GET USERNAME" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="80.0">
          <font>
             <Font size="25.0" />
          </font>

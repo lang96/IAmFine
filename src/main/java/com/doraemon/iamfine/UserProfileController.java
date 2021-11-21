@@ -36,7 +36,10 @@ public class UserProfileController implements Initializable {
     private Hyperlink bindBtn;
 
     @FXML
-    private TextField IDTextField, passwordTextField,
+    private Label usernameLabel;
+
+    @FXML
+    private TextField passwordTextField,
     phoneNumTextField, emailTextField, ageTextField;
 
     @FXML
@@ -50,9 +53,9 @@ public class UserProfileController implements Initializable {
 
         for (int i = 0; i < UserList.size(); i++) {
 
-            if (UserList.get(i).getUsername().equals(currentUserID))
+            if (UserList.get(i).getUsername().equals(currentUserID)) {
 
-                IDTextField.setText(UserList.get(i).getUsername());
+                usernameLabel.setText(UserList.get(i).getUsername());
                 passwordTextField.setText(UserList.get(i).getPassword());
                 addressTextField.setText(UserList.get(i).getAddress());
                 phoneNumTextField.setText(UserList.get(i).getPhone());
@@ -61,7 +64,10 @@ public class UserProfileController implements Initializable {
                 gender.getSelectionModel().select(UserList.get(i).getGender());
 
             }
+
         }
+
+    }
 
     @FXML
     public void toUserHomepage() throws IOException {

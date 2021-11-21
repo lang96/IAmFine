@@ -13,6 +13,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
+import static com.doraemon.iamfine.MainApplication.*;
+import static com.doraemon.iamfine.data.DataOperation.*;
+
+
+
 public class UserRegisterController {
 
     @FXML
@@ -20,7 +25,7 @@ public class UserRegisterController {
 
     @FXML
     private TextField usernameTextField,passwordTextField,
-            phoneNumTextField,emailTextField, ageTextField;
+            phoneNumTextField,emailTextField, ageTextField, addressTextField;
 
     @FXML
     private RadioButton male, female;
@@ -45,11 +50,12 @@ public class UserRegisterController {
         String password = passwordTextField.getText();
         String phoneNum = phoneNumTextField.getText();
         String email = emailTextField.getText();
+        String address = addressTextField.getText();
         String age = ageTextField.getText();
         RadioButton gender = (RadioButton)radioGroup.getSelectedToggle();
 
         if (username.equals("") || password.equals("") || phoneNum.equals("") ||
-                email.equals("") || age.equals("") || gender == null) {
+                email.equals("") || address.equals("") || age.equals("") || gender == null) {
             Alert dialog = new Alert(Alert.AlertType.ERROR,
                     "Please fill all the details below completely!", ButtonType.OK);
             dialog.show();
@@ -70,9 +76,13 @@ public class UserRegisterController {
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
                         "Registration Successful", ButtonType.OK);
 
-                //todo : Add user object creation
+                addUser(username, password, phoneNum, email, address, age, selectedGender);
 
                 dialogue.showAndWait();
+
+                currentUserID = username;
+                currentUserType = "User";
+
                 Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
                 Stage window = (Stage) userBtn.getScene().getWindow();
                 window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));

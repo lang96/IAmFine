@@ -24,7 +24,7 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <Text fill="#f8f8f8" layoutX="99.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello There">
+      <Text fill="#f8f8f8" layoutX="99.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello there," textAlignment="CENTER" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="97.416015625">
          <font>
             <Font size="28.0" />
          </font>
@@ -46,7 +46,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="65.0" layoutY="96.0" text="GET THERAPIST NAME" textFill="WHITE">
+      <Label fx:id="therapistNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="96.0" text="GET THERAPIST NAME" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0">
          <font>
             <Font size="21.0" />
          </font>

@@ -7,6 +7,7 @@ import com.doraemon.iamfine.system.Meeting.Feedback;
 import static com.doraemon.iamfine.system.Meeting.Feedback.FeedbackList;
 import static com.doraemon.iamfine.system.Meeting.Feedback.setNewFeedbackID;
 import static com.doraemon.iamfine.system.Meeting.setNewMeetingID;
+import static com.doraemon.iamfine.userType.Therapist.setNewID;
 import static com.doraemon.iamfine.userType.User.UserList;
 import static com.doraemon.iamfine.userType.Therapist.TherapistList;
 import static com.doraemon.iamfine.system.Meeting.MeetingList;
@@ -44,6 +45,7 @@ public class DataOperation {
 
             JSONArray typeArr = (JSONArray) userData.get("type");
             JSONArray usernameArr = (JSONArray) userData.get("username");
+            JSONArray therapistNameArr = (JSONArray) userData.get("therapistName");
             JSONArray passwordArr = (JSONArray) userData.get("password");
             JSONArray phoneArr = (JSONArray) userData.get("phone");
             JSONArray emailArr = (JSONArray) userData.get("email");
@@ -69,6 +71,7 @@ public class DataOperation {
                     String age = "" + ageArr.get(i);
 
                     // only for therapist
+                    String fullName = "" + therapistNameArr.get(i);
                     String license = "" + licenseArr.get(i);
                     String experience = "" + experienceArr.get(i);
 
@@ -112,15 +115,15 @@ public class DataOperation {
                                 }
 
                                 if (!meetingsTh.isEmpty()) {
-                                    TherapistList.add(new Therapist(username, password, phone, email, license, experience, gender, meetingsTh));
+                                    TherapistList.add(new Therapist(username, fullName, password, phone, email, license, experience, gender, meetingsTh));
                                     break;
                                 } else {
-                                    TherapistList.add(new Therapist(username, password, phone, email, license, experience, gender));
+                                    TherapistList.add(new Therapist(username, fullName, password, phone, email, license, experience, gender));
                                     break;
                                 }
 
                             } else {
-                                TherapistList.add(new Therapist(username, password, phone, email, license, experience, gender));
+                                TherapistList.add(new Therapist(username, fullName, password, phone, email, license, experience, gender));
                                 break;
                             }
 
@@ -236,6 +239,7 @@ public class DataOperation {
 
             JSONArray typeArr = (JSONArray) userData.get("type");
             JSONArray usernameArr = (JSONArray) userData.get("username");
+            JSONArray therapistNameArr = (JSONArray) userData.get("therapistName");
             JSONArray passwordArr = (JSONArray) userData.get("password");
             JSONArray phoneArr = (JSONArray) userData.get("phone");
             JSONArray emailArr = (JSONArray) userData.get("email");
@@ -247,6 +251,7 @@ public class DataOperation {
 
             typeArr.add("User");
             usernameArr.add(username);
+            therapistNameArr.add("-");
             passwordArr.add(password);
             phoneArr.add(phone);
             emailArr.add(email);
@@ -265,6 +270,7 @@ public class DataOperation {
             userData.put("phone", phoneArr);
             userData.put("password", passwordArr);
             userData.put("username", usernameArr);
+            userData.put("therapistName", therapistNameArr);
             userData.put("type", typeArr);
 
             UserList.add(new User(username, password, phone, email, address, age, gender));
@@ -289,8 +295,10 @@ public class DataOperation {
 
     }
 
-    public static void addTherapist(String username, String password, String phone,
+    public static String addTherapist(String fullName, String password, String phone,
                                     String email, String license, String experience, String gender) {
+
+        String username = "";
 
         JSONParser jsonParser = new JSONParser();
 
@@ -302,6 +310,7 @@ public class DataOperation {
 
             JSONArray typeArr = (JSONArray) userData.get("type");
             JSONArray usernameArr = (JSONArray) userData.get("username");
+            JSONArray therapistNameArr = (JSONArray) userData.get("therapistName");
             JSONArray passwordArr = (JSONArray) userData.get("password");
             JSONArray phoneArr = (JSONArray) userData.get("phone");
             JSONArray emailArr = (JSONArray) userData.get("email");
@@ -311,8 +320,12 @@ public class DataOperation {
             JSONArray experienceArr = (JSONArray) userData.get("experience");
             JSONArray genderArr = (JSONArray) userData.get("gender");
 
-            typeArr.add("User");
+            // generating meeting ID based on existing number of meetings
+            username = setNewID();
+
+            typeArr.add("Therapist");
             usernameArr.add(username);
+            therapistNameArr.add(fullName);
             passwordArr.add(password);
             phoneArr.add(phone);
             emailArr.add(email);
@@ -331,9 +344,10 @@ public class DataOperation {
             userData.put("phone", phoneArr);
             userData.put("password", passwordArr);
             userData.put("username", usernameArr);
+            userData.put("therapistName", therapistNameArr);
             userData.put("type", typeArr);
 
-            TherapistList.add(new Therapist(username, password, phone, email, license, experience, gender));
+            TherapistList.add(new Therapist(username, fullName, password, phone, email, license, experience, gender));
 
             try (FileWriter fileWrite = new FileWriter(System.getProperty("user.dir") +
                     "\\src\\main\\java\\com\\doraemon\\iamfine\\data\\" + "userData.json")) {
@@ -352,6 +366,8 @@ public class DataOperation {
         } catch (ParseException f) {
             f.printStackTrace();
         }
+
+        return username;
 
     }
 

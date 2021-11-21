@@ -9,16 +9,17 @@ import java.util.ArrayList;
 public class Therapist {
 
     // private members
-    private String username, password, phone, email, license, experience, gender;
+    private String username, fullName, password, phone, email, license, experience, gender;
     private ArrayList<Meeting> meetings;
 
     // public members
     public static ArrayList<Therapist> TherapistList = new ArrayList<>();
 
     // constructors
-    public Therapist(String username, String password, String phone, String email, String license, String experience, String gender) {
+    public Therapist(String username, String fullName, String password, String phone, String email, String license, String experience, String gender) {
 
         this.username = username;
+        this.fullName = fullName;
         this.password = password;
         this.phone = phone;
         this.email = email;
@@ -29,9 +30,10 @@ public class Therapist {
 
     }
 
-    public Therapist(String username, String password, String phone, String email, String license, String experience, String gender, ArrayList<Meeting> meetings) {
+    public Therapist(String username, String fullName, String password, String phone, String email, String license, String experience, String gender, ArrayList<Meeting> meetings) {
 
         this.username = username;
+        this.fullName = fullName;
         this.password = password;
         this.phone = phone;
         this.email = email;
@@ -45,6 +47,9 @@ public class Therapist {
     // methods
 
         // getters
+    public String getFullName() {
+        return fullName;
+    }
     public String getUsername() {
         return this.username;
     }
@@ -71,6 +76,9 @@ public class Therapist {
     }
 
         // setters
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
     public void setUsername(String username) {
         this.username = username;
     }
@@ -99,6 +107,21 @@ public class Therapist {
         // toString
 
         // list and JSON methods
+    public static String setNewID() { // ID structure designed for system with a maximum of 999 therapists
+
+        String newID = "";
+
+        if (TherapistList.size() < 9) {
+            newID = "TH00" + (TherapistList.size() + 1);
+        } else if (TherapistList.size() < 99) {
+            newID = "TH0" + (TherapistList.size() + 1);
+        } else {
+            newID = "TH" + (TherapistList.size() + 1);
+        }
+
+        return newID;
+
+    }
 
         // accompanying methods
 
