@@ -112,11 +112,11 @@ public class Therapist {
         String newID = "";
 
         if (TherapistList.size() < 9) {
-            newID = "TH00" + (TherapistList.size() + 1);
+            newID = "TR00" + (TherapistList.size() + 1);
         } else if (TherapistList.size() < 99) {
-            newID = "TH0" + (TherapistList.size() + 1);
+            newID = "TR0" + (TherapistList.size() + 1);
         } else {
-            newID = "TH" + (TherapistList.size() + 1);
+            newID = "TR" + (TherapistList.size() + 1);
         }
 
         return newID;
