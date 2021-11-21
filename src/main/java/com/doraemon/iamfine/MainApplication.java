@@ -24,7 +24,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("userProfile.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));
@@ -33,7 +33,6 @@ public class MainApplication extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        currentUserID="s";
         initData();
         launch();
     }

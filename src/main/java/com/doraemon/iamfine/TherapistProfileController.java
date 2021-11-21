@@ -37,21 +37,22 @@ public class TherapistProfileController {
     public void initialize() {
         gender.getItems().removeAll(gender.getItems());
         gender.getItems().addAll("Male", "Female");
-        IDTextField.setText("TH001");
 
         for (int i = 0; i < TherapistList.size(); i++) {
 
-            if (TherapistList.get(i).getUsername().equals(currentUserID))
+            if (TherapistList.get(i).getUsername().equals(currentUserID)) {
 
-                    IDTextField.setText(TherapistList.get(i).getUsername());
-                    passwordTextField.setText(TherapistList.get(i).getPassword());
-                    phoneNumTextField.setText(TherapistList.get(i).getPhone());
-                    emailTextField.setText(TherapistList.get(i).getEmail());
-                    licenseTextField.setText(TherapistList.get(i).getLicense());
-                    experienceTextField.setText(TherapistList.get(i).getExperience());
-                    gender.setPromptText(UserList.get(i).getGender());
+                IDTextField.setText(TherapistList.get(i).getUsername());
+                passwordTextField.setText(TherapistList.get(i).getPassword());
+                phoneNumTextField.setText(TherapistList.get(i).getPhone());
+                emailTextField.setText(TherapistList.get(i).getEmail());
+                licenseTextField.setText(TherapistList.get(i).getLicense());
+                experienceTextField.setText(TherapistList.get(i).getExperience());
+                gender.getSelectionModel().select(UserList.get(i).getGender());
 
+            }
         }
+
     }
 
     @FXML

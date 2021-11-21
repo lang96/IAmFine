@@ -1,11 +1,11 @@
 { "type":["User","Therapist"],
-  "username":["s"],
-  "password":["s"],
-  "phone":["s"],
-  "email":["s"],
-  "address":["s"],
-  "age":["s"],
-  "license":[""],
-  "experience":[""],
-  "gender":["s"]
+  "username":["s","t"],
+  "password":["s","t"],
+  "phone":["s","t"],
+  "email":["s","t"],
+  "address":["s","-"],
+  "age":["s","-"],
+  "license":["-","t"],
+  "experience":["-","t"],
+  "gender":["Male","Female"]
 }

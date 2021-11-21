@@ -47,7 +47,6 @@ public class UserProfileController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         gender.getItems().removeAll(gender.getItems());
         gender.getItems().addAll("Male", "Female");
-        IDTextField.setText("US001");
 
         for (int i = 0; i < UserList.size(); i++) {
 
@@ -59,8 +58,7 @@ public class UserProfileController implements Initializable {
                 phoneNumTextField.setText(UserList.get(i).getPhone());
                 emailTextField.setText(UserList.get(i).getEmail());
                 ageTextField.setText(UserList.get(i).getAge());
-                gender.setPromptText(UserList.get(i).getGender());
-
+                gender.getSelectionModel().select(UserList.get(i).getGender());
 
             }
         }
@@ -101,6 +99,9 @@ public class UserProfileController implements Initializable {
             Optional<ButtonType> option = alert.showAndWait();
 
             if (option.get() == yes) {
+
+
+
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
                         "Change successful", ButtonType.OK);
                 dialogue.showAndWait();
