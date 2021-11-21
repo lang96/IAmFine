@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.doraemon.iamfine.MainApplication.*;
+
 public class PreferencesPageController {
 
     @FXML
@@ -29,6 +31,8 @@ public class PreferencesPageController {
     @FXML
     public void logOut() throws IOException {
 
+        currentUserID = "";
+        currentUserType = "";
         Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
         Stage window = (Stage) logoutBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));

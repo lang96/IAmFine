@@ -20,7 +20,7 @@ import static com.doraemon.iamfine.userType.Therapist.TherapistList;
 public class TherapistHomepageController implements Initializable {
 
     @FXML
-    private Button backBtn,profileBtn,meetingBtn;
+    private Button backBtn,profileBtn,meetingBtn,preferenceBtn;
 
     @FXML
     private Label therapistNameLabel;
@@ -70,15 +70,14 @@ public class TherapistHomepageController implements Initializable {
 
     }
 
-//    @FXML
-//    public void toPreferences() throws IOException {
-//
-//        Parent root = FXMLLoader.load(getClass().getResource("preferencesPage.fxml"));
-//        Stage window = (Stage) preferenceBtn.getScene().getWindow();
-//        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
-//        window.setScene(new Scene(root,335,602));
-//
-//    }
+    @FXML
+    public void toPreferences() throws IOException {
 
+        Parent root = FXMLLoader.load(getClass().getResource("preferencesPage.fxml"));
+        Stage window = (Stage) preferenceBtn.getScene().getWindow();
+        window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+        window.setScene(new Scene(root,335,602));
+
+    }
 
 }
