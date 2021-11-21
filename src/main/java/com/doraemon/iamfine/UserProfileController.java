@@ -20,7 +20,7 @@ import static com.doraemon.iamfine.MainApplication.currentUserID;
 import static com.doraemon.iamfine.MainApplication.currentUserID;
 import static com.doraemon.iamfine.data.DataOperation.*;
 import static com.doraemon.iamfine.userType.User.*;
-import static  com.doraemon.iamfine.data.DataOperation.*;
+
 
 
 public class UserProfileController implements Initializable {
@@ -100,7 +100,14 @@ public class UserProfileController implements Initializable {
 
             if (option.get() == yes) {
 
+                String password = passwordTextField.getText();
+                String phone = phoneNumTextField.getText();
+                String email = emailTextField.getText();
+                String address = addressTextField.getText();
+                String age = ageTextField.getText();
+                String selectedGender = gender.getSelectionModel().getSelectedItem();
 
+                editUser(currentUserID, password, phone, email, address, age, selectedGender);
 
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
                         "Change successful", ButtonType.OK);

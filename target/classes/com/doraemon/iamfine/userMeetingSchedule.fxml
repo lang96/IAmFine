@@ -33,17 +33,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="setMeetingBtn" layoutX="61.0" layoutY="334.0" mnemonicParsing="false" onAction="#toSetMeeting" prefHeight="24.0" prefWidth="106.0" style="-fx-background-color: #276927;" text="Set A Meeting" textFill="#fcfafa" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="31.0" layoutY="388.0" stroke="#faf9f9" strokeType="INSIDE" width="343.0" />
-      <Text layoutX="98.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Meeting" wrappingWidth="178.13673400878906">
+      <Button fx:id="setMeetingBtn" layoutX="119.0" layoutY="276.0" mnemonicParsing="false" onAction="#toSetMeeting" prefHeight="24.0" prefWidth="106.0" style="-fx-background-color: #276927;" text="Set A Meeting" textFill="#fcfafa" />
+      <Text layoutX="97.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Meeting" wrappingWidth="178.13673400878906">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="29.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONDAY" />
-      <Line endX="-15.200027465820312" endY="155.0" layoutX="124.0" layoutY="264.0" startX="-122.00001525878906" startY="155.0" stroke="#0abc0d" />
-      <Text layoutX="142.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TUESDAY" wrappingWidth="49.763671875" />
-      <Text layoutX="241.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEDNESDAY" wrappingWidth="69.90234375" />
       <Text layoutX="171.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist's Name" wrappingWidth="106.40000000000009">
          <font>
             <Font size="14.0" />
@@ -60,5 +55,6 @@
             <Font size="13.0" />
          </font>
       </Text>
+      <Line endX="217.625" endY="155.0" layoutX="123.0" layoutY="168.0" startX="-122.00001525878906" startY="155.0" stroke="#0abc0d" />
    </children>
 </AnchorPane>

@@ -455,7 +455,7 @@ public class DataOperation {
 
     }
 
-    public static void editUser(String oldUsername, String newUsername, String password,
+    public static void editUser(String username, String password,
                                 String phone, String email, String address,
                                 String age, String gender) {
 
@@ -484,7 +484,7 @@ public class DataOperation {
                 for (int i = 0; i < usernameArr.size(); i++) {
 
                     idCompare = "" + usernameArr.get(i);
-                    if (idCompare.equals(oldUsername)) {
+                    if (idCompare.equals(username)) {
                         jsonUpdateIndex = i;
                         break;
                     }
@@ -500,7 +500,6 @@ public class DataOperation {
 
                 }
 
-                UserList.get(listUpdateIndex).setUsername(newUsername);
                 UserList.get(listUpdateIndex).setPassword(password);
                 UserList.get(listUpdateIndex).setPhone(phone);
                 UserList.get(listUpdateIndex).setEmail(email);
@@ -508,7 +507,6 @@ public class DataOperation {
                 UserList.get(listUpdateIndex).setAge(age);
                 UserList.get(listUpdateIndex).setGender(gender);
 
-                usernameArr.set(jsonUpdateIndex, newUsername);
                 passwordArr.set(jsonUpdateIndex, password);
                 phoneArr.set(jsonUpdateIndex, phone);
                 emailArr.set(jsonUpdateIndex, email);
@@ -522,7 +520,6 @@ public class DataOperation {
                 userData.put("email", emailArr);
                 userData.put("phone", phoneArr);
                 userData.put("password", passwordArr);
-                userData.put("username", usernameArr);
 
                 try (FileWriter fileWrite = new FileWriter(System.getProperty("user.dir") +
                         "\\src\\main\\java\\com\\doraemon\\iamfine\\data\\" + "userData.json")) {
@@ -548,7 +545,7 @@ public class DataOperation {
 
     }
 
-    public static void editTherapist(String oldUsername, String newUsername, String password,
+    public static void editTherapist(String username, String password,
                                      String phone, String email, String license,
                                      String experience, String gender) {
 
@@ -577,7 +574,7 @@ public class DataOperation {
                 for (int i = 0; i < usernameArr.size(); i++) {
 
                     idCompare = "" + usernameArr.get(i);
-                    if (idCompare.equals(oldUsername)) {
+                    if (idCompare.equals(username)) {
                         jsonUpdateIndex = i;
                         break;
                     }
@@ -593,7 +590,6 @@ public class DataOperation {
 
                 }
 
-                TherapistList.get(listUpdateIndex).setUsername(newUsername);
                 TherapistList.get(listUpdateIndex).setPassword(password);
                 TherapistList.get(listUpdateIndex).setPhone(phone);
                 TherapistList.get(listUpdateIndex).setEmail(email);
@@ -601,7 +597,6 @@ public class DataOperation {
                 TherapistList.get(listUpdateIndex).setExperience(experience);
                 TherapistList.get(listUpdateIndex).setGender(gender);
 
-                usernameArr.set(jsonUpdateIndex, newUsername);
                 passwordArr.set(jsonUpdateIndex, password);
                 phoneArr.set(jsonUpdateIndex, phone);
                 emailArr.set(jsonUpdateIndex, email);
@@ -615,7 +610,6 @@ public class DataOperation {
                 userData.put("email", emailArr);
                 userData.put("phone", phoneArr);
                 userData.put("password", passwordArr);
-                userData.put("username", usernameArr);
 
                 try (FileWriter fileWrite = new FileWriter(System.getProperty("user.dir") +
                         "\\src\\main\\java\\com\\doraemon\\iamfine\\data\\" + "userData.json")) {

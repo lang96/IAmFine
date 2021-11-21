@@ -85,6 +85,16 @@ public class TherapistProfileController {
             Optional<ButtonType> option = alert.showAndWait();
 
             if (option.get() == yes) {
+
+                String password = passwordTextField.getText();
+                String phone = phoneNumTextField.getText();
+                String email = emailTextField.getText();
+                String license = licenseTextField.getText();
+                String experience = experienceTextField.getText();
+                String selectedGender = gender.getSelectionModel().getSelectedItem();
+
+                editTherapist(currentUserID, password, phone, email, license, experience, selectedGender);
+
                 Alert dialogue = new Alert(Alert.AlertType.CONFIRMATION,
                         "Change successful", ButtonType.OK);
                 dialogue.showAndWait();
