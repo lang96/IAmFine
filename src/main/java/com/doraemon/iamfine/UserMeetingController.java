@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,6 +24,16 @@ public class UserMeetingController {
     @FXML
     private TextField commentTextField;
 
+    @FXML
+    private VBox pane;
+
+
+    @FXML
+    public void initialize() {
+        WebView webView = new WebView();
+        webView.getEngine().load("https://meet.google.com/");
+        pane.getChildren().add(webView);
+    }
 
     @FXML
     public void toUserSetMeeting() throws IOException {
