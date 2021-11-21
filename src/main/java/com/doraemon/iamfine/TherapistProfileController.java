@@ -48,7 +48,7 @@ public class TherapistProfileController {
         if (passwordTextField.getText().equals("") || phoneNumTextField.getText().equals("") ||
                 emailTextField.getText().equals("") || licenseTextField.getText().equals("") ||
                 experienceTextField.getText().equals("")) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill in the form", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the details below completely!", ButtonType.OK);
             alert.show();
         } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

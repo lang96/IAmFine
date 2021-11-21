@@ -65,7 +65,7 @@ public class UserProfileController {
                 addressTextField.getText().equals("") || phoneNumTextField.getText().equals("") ||
                 emailTextField.getText().equals("") || ageTextField.getText().equals("")) {
             Alert alert = new Alert(Alert.AlertType.ERROR,
-                    "Please fill in the form", ButtonType.OK);
+                    "Please fill all the details below completely!", ButtonType.OK);
             alert.show();
         } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

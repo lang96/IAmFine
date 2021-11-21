@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -25,6 +22,12 @@ public class TherapistRegisterController {
             experienceTextField;
 
     @FXML
+    private RadioButton male, female;
+
+    @FXML
+    private ToggleGroup radioGroup;
+
+    @FXML
     public void toLandingPage() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("landingPage.fxml"));
@@ -37,12 +40,16 @@ public class TherapistRegisterController {
     @FXML
     public void toTheraHomepage() throws IOException {
 
+        RadioButton gender = (RadioButton)radioGroup.getSelectedToggle();
+
         if (usernameTextField.getText().equals("") || passwordTextField.getText().equals("") ||
                 phoneNumTextField.getText().equals("") || emailTextField.getText().equals("") ||
-                licenseTextField.getText().equals("") || experienceTextField.getText().equals("")) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill in the form", ButtonType.OK);
+                licenseTextField.getText().equals("") || experienceTextField.getText().equals("") || gender == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill all the details below completely!", ButtonType.OK);
             alert.showAndWait();
         } else {
+            String selectedGender = gender.getText();
+
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Are you sure to continue?");
@@ -56,7 +63,10 @@ public class TherapistRegisterController {
 
             if (option.get() == yes) {
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
-                        "Change successful", ButtonType.OK);
+                        "Registration successful", ButtonType.OK);
+
+                //todo : Add therapist object creation
+
                 dialogue.showAndWait();
                 Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
                 Stage window = (Stage) theraBtn.getScene().getWindow();

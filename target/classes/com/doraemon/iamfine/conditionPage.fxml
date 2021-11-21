@@ -52,9 +52,6 @@
          <font>
             <Font size="22.0" />
          </font>
-         <toggleGroup>
-            <ToggleGroup fx:id="radioGroup" />
-         </toggleGroup>
       </RadioButton>
       <TextArea layoutX="39.0" layoutY="324.0" prefHeight="149.0" prefWidth="261.0" />
       <Button layoutX="143.0" layoutY="489.0" mnemonicParsing="false" style="-fx-background-color: #276927;" text="Submit" textFill="#f5f5f5" />

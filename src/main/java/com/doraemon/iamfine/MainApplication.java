@@ -16,10 +16,13 @@ import java.io.IOException;
 
 public class MainApplication extends Application {
 
+    public static String currentUserID; // determine logged in user
+    public static String currentUserType; // determine logged in userType
+
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("userMeeting.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("userRegister.fxml"));
         primaryStage.setTitle("I Am Fine");
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         primaryStage.setScene(new Scene(root,335,602));
@@ -28,6 +31,7 @@ public class MainApplication extends Application {
     }
 
     public static void main(String[] args) throws IOException {
+        System.out.println(System.getProperty("user.dir"));
         launch();
     }
 }

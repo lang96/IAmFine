@@ -46,14 +46,16 @@ public class UserRegisterController {
         String phoneNum = phoneNumTextField.getText();
         String email = emailTextField.getText();
         String age = ageTextField.getText();
-        String gender = "";
+        RadioButton gender = (RadioButton)radioGroup.getSelectedToggle();
 
         if (username.equals("") || password.equals("") || phoneNum.equals("") ||
-                email.equals("") || age.equals("")) {
+                email.equals("") || age.equals("") || gender == null) {
             Alert dialog = new Alert(Alert.AlertType.ERROR,
-                    "Please Fill in the form", ButtonType.OK);
+                    "Please fill all the details below completely!", ButtonType.OK);
             dialog.show();
         } else {
+            String selectedGender = gender.getText();
+
             Alert confirmDialogue = new Alert(Alert.AlertType.CONFIRMATION);
             confirmDialogue.setTitle("Confirmation");
             confirmDialogue.setHeaderText("Are you sure to continue?");
@@ -66,7 +68,10 @@ public class UserRegisterController {
             Optional<ButtonType> option = confirmDialogue.showAndWait();
             if (option.get() == yes) {
                 Alert dialogue = new Alert(Alert.AlertType.NONE,
-                        "Register Successful", ButtonType.OK);
+                        "Registration Successful", ButtonType.OK);
+
+                //todo : Add user object creation
+
                 dialogue.showAndWait();
                 Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
                 Stage window = (Stage) userBtn.getScene().getWindow();

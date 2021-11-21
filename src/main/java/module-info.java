@@ -13,6 +13,7 @@ module com.doraemon.iamfine {
     requires firebase.admin;
     requires com.google.auth.oauth2;
     requires com.google.auth;
+    requires json.simple;
 
     opens com.doraemon.iamfine to javafx.fxml;
     exports com.doraemon.iamfine;

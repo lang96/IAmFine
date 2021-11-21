@@ -30,11 +30,11 @@
         <Text layoutX="55.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experience" />
         <TextField fx:id="experienceTextField" layoutX="55.0" layoutY="440.0" prefHeight="25.0" prefWidth="64.0" />
         <Text layoutX="146.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
-        <RadioButton layoutX="202.0" layoutY="432.0" mnemonicParsing="false" selected="true" text="Male">
+        <RadioButton fx:id="male" layoutX="202.0" layoutY="432.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="radioGroup" />
          </toggleGroup></RadioButton>
-        <RadioButton layoutX="202.0" layoutY="457.0" mnemonicParsing="false" text="Female" toggleGroup="$radioGroup" />
+        <RadioButton fx:id="female" layoutX="202.0" layoutY="457.0" mnemonicParsing="false" text="Female" toggleGroup="$radioGroup" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#276927" height="56.0" layoutX="-2.0" layoutY="-2.0" opacity="0.85" stroke="BLACK" strokeType="INSIDE" width="343.0" />
         <Button fx:id="backBtn" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#toLandingPage" style="-fx-background-color: transparent;">
             <graphic>
@@ -46,7 +46,7 @@
             </graphic></Button>
         <Button fx:id="theraBtn" layoutX="261.0" layoutY="14.0" mnemonicParsing="false" onAction="#toTheraHomepage" style="-fx-background-color: #276927;" text="REGISTER" textFill="WHITE" />
       <Text layoutX="146.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Therapist" />
-      <Text layoutX="51.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License" />
+      <Text layoutX="51.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License No." />
       <TextField fx:id="licenseTextField" layoutX="53.0" layoutY="384.0" />
     </children>
 

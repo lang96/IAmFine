@@ -1,0 +1,11 @@
+{ "type":[""],
+  "username":[""],
+  "password":[""],
+  "phone":[""],
+  "email":[""],
+  "address":[""],
+  "age":[""],
+  "license":[""],
+  "experience":[""],
+  "gender":[""]
+}

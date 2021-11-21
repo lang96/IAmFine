@@ -40,14 +40,10 @@ public class TherapistMeetingController extends Application {
     @FXML
     public void toTheraJoinMeeting() throws IOException {
 
-        //todo: remove this if not needed
-        //boleh remove
         Parent root = FXMLLoader.load(getClass().getResource("therapistJoinMeeting.fxml"));
         Stage window = (Stage) meetBtn.getScene().getWindow();
         window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
         window.setScene(new Scene(root,335,602));
-
-        getHostServices().showDocument("https://meet.google.com/");
 
     }
 

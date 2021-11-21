@@ -30,15 +30,25 @@ public class LoginController {
     }
 
     @FXML
-    public void toTherapistHomePage() throws IOException {
-        //dummy
-        String usernameFirebase = "Adib";
-        String passwordFirebase = "rocket";
+    public void toHomePage() throws IOException {
+
+        //dummy user
+        String username = "Adib";
+        String password = "rocket";
+
+        //dummy therapist
+        String usernameTh = "TH001";
+        String passwordTh = "needhelp";
 
         String getUsername = usernameTextField.getText();
         String getPassword = passwordTextField.getText();
 
-        if (getUsername.equals(usernameFirebase) && getPassword.equals(passwordFirebase)) {
+        if (getUsername.equals(username) && getPassword.equals(password)) {
+            Parent root = FXMLLoader.load(getClass().getResource("userHomepage.fxml"));
+            Stage window = (Stage) theraBtn.getScene().getWindow();
+            window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
+            window.setScene(new Scene(root,335,602));
+        } else if (getUsername.equals(usernameTh) && getPassword.equals(passwordTh)) {
             Parent root = FXMLLoader.load(getClass().getResource("therapistHomepage.fxml"));
             Stage window = (Stage) theraBtn.getScene().getWindow();
             window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
