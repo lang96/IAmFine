@@ -13,6 +13,14 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.userType.User.UserList;
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.data.DataOperation.*;
+import static com.doraemon.iamfine.userType.Therapist.*;
+import static  com.doraemon.iamfine.data.DataOperation.*;
+
 public class TherapistProfileController {
 
     @FXML
@@ -29,8 +37,21 @@ public class TherapistProfileController {
     public void initialize() {
         gender.getItems().removeAll(gender.getItems());
         gender.getItems().addAll("Male", "Female");
-
         IDTextField.setText("TH001");
+
+        for (int i = 0; i < TherapistList.size(); i++) {
+
+            if (TherapistList.get(i).getUsername().equals(currentUserID))
+
+                    IDTextField.setText(TherapistList.get(i).getUsername());
+                    passwordTextField.setText(TherapistList.get(i).getPassword());
+                    phoneNumTextField.setText(TherapistList.get(i).getPhone());
+                    emailTextField.setText(TherapistList.get(i).getEmail());
+                    licenseTextField.setText(TherapistList.get(i).getLicense());
+                    experienceTextField.setText(TherapistList.get(i).getExperience());
+                    gender.setPromptText(UserList.get(i).getGender());
+
+        }
     }
 
     @FXML

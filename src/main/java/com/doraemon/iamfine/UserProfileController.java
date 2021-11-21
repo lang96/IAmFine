@@ -16,7 +16,14 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class UserProfileController {
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.MainApplication.currentUserID;
+import static com.doraemon.iamfine.data.DataOperation.*;
+import static com.doraemon.iamfine.userType.User.*;
+import static  com.doraemon.iamfine.data.DataOperation.*;
+
+
+public class UserProfileController implements Initializable {
 
 
     @FXML
@@ -35,13 +42,28 @@ public class UserProfileController {
     @FXML
     private TextArea addressTextField;
 
+
     @FXML
-    public void initialize() {
+    public void initialize(URL url, ResourceBundle rb) {
         gender.getItems().removeAll(gender.getItems());
         gender.getItems().addAll("Male", "Female");
-
         IDTextField.setText("US001");
-    }
+
+        for (int i = 0; i < UserList.size(); i++) {
+
+            if (UserList.get(i).getUsername().equals(currentUserID))
+
+                IDTextField.setText(UserList.get(i).getUsername());
+                passwordTextField.setText(UserList.get(i).getPassword());
+                addressTextField.setText(UserList.get(i).getAddress());
+                phoneNumTextField.setText(UserList.get(i).getPhone());
+                emailTextField.setText(UserList.get(i).getEmail());
+                ageTextField.setText(UserList.get(i).getAge());
+                gender.setPromptText(UserList.get(i).getGender());
+
+
+            }
+        }
 
     @FXML
     public void toUserHomepage() throws IOException {

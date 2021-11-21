@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
@@ -76,8 +78,10 @@ public class BindingPageController extends Application {
 
     @FXML
     public void whatsappAction(){
-        getHostServices().showDocument("https://web.whatsapp.com/");
+
+      getHostServices().showDocument("https://web.whatsapp.com/");
     }
+
 
     @FXML
     public void facebookAction(){

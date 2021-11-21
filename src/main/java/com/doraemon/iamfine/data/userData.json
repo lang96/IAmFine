@@ -1,11 +1,11 @@
-{ "type":[""],
-  "username":[""],
-  "password":[""],
-  "phone":[""],
-  "email":[""],
-  "address":[""],
-  "age":[""],
+{ "type":["User","Therapist"],
+  "username":["s"],
+  "password":["s"],
+  "phone":["s"],
+  "email":["s"],
+  "address":["s"],
+  "age":["s"],
   "license":[""],
   "experience":[""],
-  "gender":[""]
+  "gender":["s"]
 }
