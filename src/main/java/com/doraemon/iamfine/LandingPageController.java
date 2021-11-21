@@ -58,11 +58,6 @@ public class LandingPageController {
     @FXML
     public void showConfirmation() throws IOException {
 
-        String musicFile2 = "test.wav";
-        Media sound2 = new Media(new File(musicFile2).toURI().toString());
-        MediaPlayer mediaPlayer2 = new MediaPlayer(sound2);
-        mediaPlayer2.play();
-
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Select");
         alert.setHeaderText("Please select your user type");
@@ -84,21 +79,13 @@ public class LandingPageController {
             Stage window = (Stage) signInBtn.getScene().getWindow();
             window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
             window.setScene(new Scene(root,335,602));
-            String musicFile = "test.wav";
-            Media sound = new Media(new File(musicFile).toURI().toString());
-            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.play();
 
         } else if (option.get() == therapist) {
+
             Parent root = FXMLLoader.load(getClass().getResource("therapistRegister.fxml"));
             Stage window = (Stage) signInBtn.getScene().getWindow();
             window.getIcons().add(new Image(this.getClass().getResource("/raw/logo.png").toString()));
             window.setScene(new Scene(root,335,602));
-            String musicFile = "test.wav";
-            Media sound = new Media(new File(musicFile).toURI().toString());
-            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-            mediaPlayer.play();
-
 
         }
     }
